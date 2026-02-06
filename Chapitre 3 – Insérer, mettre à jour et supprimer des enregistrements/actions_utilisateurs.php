@@ -2,7 +2,7 @@
 require 'connexion.php';
 
 try {
-
+//derena UPDATE w zedena fatima//
     $stmt = $pdo->prepare(
         "INSERT INTO Utilisateur (nom, email) 
          VALUES (:nom, :email)"
@@ -19,7 +19,7 @@ try {
     echo "erreur : " . $e->getMessage();
 }
 // hade ch li kayetele3 f localhost :Connexion réussie à la base blogdb utilisateur ajouté avec succès//
-
+//INSERT//
 $stmt = $pdo->prepare(
     "UPDATE Utilisateur 
      SET email = :email 
@@ -33,3 +33,15 @@ $stmt->execute([
 
 echo " utilisateur modifié <br>";
 
+//DELETE//
+
+$stmt = $pdo->prepare(
+    "DELETE FROM Utilisateur 
+     WHERE id = :id"
+);
+
+$stmt->execute([
+    'id' => 3
+]);
+
+echo " utilisateur supprimé <br>";
