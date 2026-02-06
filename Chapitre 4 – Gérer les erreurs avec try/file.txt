@@ -1,0 +1,25 @@
+Chapter 4 – Error Handling (try / catch)
+
+PDO throws PDOException when an error occurs.
+
+try executes risky code.
+
+catch captures and handles errors.
+
+Never display detailed error messages in production.
+
+Log errors to a file instead of showing them to users.
+
+Exception handling prevents the application from crashing.
+
+✅ Best Practices
+
+Always use prepared statements.
+
+Never trust user input.
+
+Separate connection logic from application logic.
+
+Test SQL queries before running UPDATE or DELETE.
+
+Use logs for debugging, not error messages on screen.
