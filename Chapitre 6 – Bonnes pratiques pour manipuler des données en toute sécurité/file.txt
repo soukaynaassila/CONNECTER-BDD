@@ -1,0 +1,66 @@
+Chapter 6 – Secure Data Handling (Summary_)
+🎯 Goal
+Learn how to securely handle user data in PHP using PDO and avoid common security issues like SQL injection and data leaks.
+
+✅ 1. Always validate and sanitize user input
+
+User input is never trusted.
+
+Use trim() to remove extra spaces
+
+Use htmlspecialchars() to prevent HTML/JS injection
+
+Use filter_var() to validate data (especially emails)
+
+Example:
+
+$nom = htmlspecialchars(trim($_POST['nom']));
+$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+
+if (!$email) {
+    die("Invalid email");
+}
+
+✅ 2. Always use prepared statements
+
+Prepared statements separate SQL code from user data, which prevents SQL injection.
+
+$stmt = $pdo->prepare(
+    "INSERT INTO Utilisateur (nom, email) VALUES (:nom, :email)"
+);
+$stmt->execute([
+    'nom' => $nom,
+    'email' => $email
+]);
+
+
+❌ Never insert user data directly into SQL queries.
+
+✅ 3. Handle errors securely
+
+Do not display database errors to users in production
+
+Log errors in a file instead
+
+try {
+    // database code
+} catch (PDOException $e) {
+    file_put_contents('logs/errors.log', $e->getMessage(), FILE_APPEND);
+    echo "An error occurred. Please contact the administrator.";
+}
+
+✅ 4. Limit MySQL user privileges
+
+Do not use the root account in production.
+
+Create a MySQL user with limited permissions:
+
+SELECT
+
+INSERT
+
+UPDATE
+
+DELETE
+
+This limits damage if the app is compromised.
