@@ -1,5 +1,5 @@
 <?php
-
+//3ERFET LCLASS W SEMITEHA ARTICLE
 class Article {
 
     public $title;
