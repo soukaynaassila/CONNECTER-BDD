@@ -1,5 +1,5 @@
 <?php
-//Constructor :hiya function auto fax kandir new Article
+//Constructor :hiya function auto katekhedm  fax kandir new Article
 class Article {
 //protected :kateseta3emel dakhile l class w dakhile l class li weret meneha faqat
     protected $titre;

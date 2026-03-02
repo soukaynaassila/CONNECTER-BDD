@@ -28,3 +28,4 @@ class Article {
         return "Titre : {$this->titre} - Contenu : {$this->contenu}";
     }
 }
+
