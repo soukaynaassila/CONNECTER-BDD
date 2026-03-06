@@ -1,11 +1,11 @@
 <?php
 class Article {
     private $conn;
-    private $table = "articles";
+    private $table = "articles";//DECLARINA TABLE HENA BAX ILA BEGHINA MN BE3ED NDIRO FIH CHI MODIFICATION GHIR MN NEHENA
 
     public $titre;
     public $contenu;
-
+//Constructor
     public function __construct() {
         try {
             $this->conn = new PDO(
@@ -27,7 +27,7 @@ class Article {
         $sql = "INSERT INTO {$this->table} (titre, contenu)
                 VALUES (:titre, :contenu)";
 
-        $stmt = $this->conn->prepare($sql);
+        $stmt = $this->conn->prepare($sql);//prepared statement bax n7ami application mn Injection
 
         return $stmt->execute([
             'titre' => $this->titre,
@@ -42,10 +42,10 @@ class Article {
     }
 }
 
-    // Lister articles
+    // Lister articles hade l function katejib l articles mn db
     public function read() {
         $sql = "SELECT * FROM {$this->table} ORDER BY id DESC";
         $stmt = $this->conn->query($sql);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);//katereje3 les result 3ela chekel array associative
     }
 }
