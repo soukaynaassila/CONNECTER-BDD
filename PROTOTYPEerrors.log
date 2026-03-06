@@ -1,0 +1,11 @@
+[06-Mar-2026 11:08:01 Europe/Berlin] PHP Warning:  require(Articlephp): Failed to open stream: No such file or directory in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\index.php on line 5
+[06-Mar-2026 11:08:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Articlephp' (include_path='C:\xampp\php\PEAR') in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\index.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\index.php on line 5
+[06-Mar-2026 11:10:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\Article.php on line 15
+TEST ERROR LOGTEST ERROR LOGTEST ERROR LOGTEST ERROR LOGTEST ERROR LOGTEST ERROR LOG[06-Mar-2026 11:17:56 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\Article.php on line 28
+TEST ERROR LOG[06-Mar-2026 11:18:06 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\Article.php on line 28
+[06-Mar-2026 11:19:51 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$e", expecting ")" in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\Article.php on line 37
+[06-Mar-2026 11:19:52 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$e", expecting ")" in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\Article.php on line 37
+[06-Mar-2026 11:19:52 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$e", expecting ")" in C:\Users\Solicode\Documents\CONNECTER-BDD\PROTOTYPE\Article.php on line 37
